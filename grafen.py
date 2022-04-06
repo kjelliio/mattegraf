@@ -1,21 +1,25 @@
-from matplotlib import pyplot
 import math
 import numpy as np
 from pylab import *
+title('Temperatur per 5min')
+xlabel('tid')
+ylabel('temperatur')
 temperatur = [9,29.9,30.4,30.5,30.4,32.1,32.3,32.1,30.9,31.6,31.7,30.5,32.3,31.9,31.6,31.1,31.6,32.4,32.1,30.2,29.2,29.1,29.3,28,28.1,27.3,27.2,25.6,25.1,25.2]
-tid = [0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29]
+tid = [5,10,15,20,25,30,35,40,45,50,55,60,65,70,75,80,85,90,95,100,105,110,115,120,125,130,135,140,145,150]
 
+interval1 = [9,29.9]
+tid1 = [5,10]
 
-def f(x):
-    #if 0 <= x <= 5
-    return 20.9*x + 9
+interval2 = [29.9,32.4]
+#fra 10 te 90 pa x-aksen
+tid2 = [10,90]
 
-x = np.linspace(0,10)
-pyplot.plot(x,f(x),tid,temperatur,'o')
-pyplot.ylim(35)
-fig = pyplot.figure()
-a1 = fig.add_axes([0,0,1,1])
-#a1.set_ylim(20)
-a1.plot(x,f(x))
-a1.set_title('Temperatur')
-pyplot.show()
+interval3 = [32.4,25]
+tid3 = [90,146]
+
+plot(tid,temperatur, 'o', label="orginal graf")
+plot(tid1,interval1,label="interval1")
+plot(tid2,interval2,label="interval2")
+plot(tid3,interval3,label="interval3")
+legend() # denna displaye bare labelene
+show()
