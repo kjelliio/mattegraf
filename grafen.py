@@ -1,5 +1,3 @@
-import math
-import numpy as np
 from pylab import *
 title('Temperatur per 5min')
 xlabel('tid')
