@@ -1,4 +1,6 @@
 from pylab import *
+import matplotlib.style as style
+style.use('dark_background')
 title('En graf over Temperaturen')
 xlabel('Tid')
 ylabel('Temp')
